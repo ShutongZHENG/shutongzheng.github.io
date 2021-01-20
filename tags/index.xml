@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Shutong ZHENG</title>
+    <link>https://shutongzheng.github.io/tags/</link>
+    <description>Recent content in Tags on Shutong ZHENG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Jan 2021 02:11:56 +0100</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://shutongzheng.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>std::cref</title>
+      <link>https://shutongzheng.github.io/tags/stdcref/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/stdcref/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>std::ref</title>
+      <link>https://shutongzheng.github.io/tags/stdref/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/stdref/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>std::thread</title>
+      <link>https://shutongzheng.github.io/tags/stdthread/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/stdthread/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>引用</title>
+      <link>https://shutongzheng.github.io/tags/%E5%BC%95%E7%94%A8/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/%E5%BC%95%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
