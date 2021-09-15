@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>视图指针 on Shutong ZHENG</title>
+    <link>https://shutongzheng.github.io/tags/%E8%A7%86%E5%9B%BE%E6%8C%87%E9%92%88/</link>
+    <description>Recent content in 视图指针 on Shutong ZHENG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 20 Jan 2021 04:45:05 +0100</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/%E8%A7%86%E5%9B%BE%E6%8C%87%E9%92%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MFC 文档类 获取各视图类指针</title>
+      <link>https://shutongzheng.github.io/posts/windows/0x00000003/</link>
+      <pubDate>Wed, 20 Jan 2021 04:45:05 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/windows/0x00000003/</guid>
+      <description>在MFC中，可以通过文档类（CDocument Class）对每一视图类进行视图指针获取
+CDocument 中包含两个重要的函数 CDocument::GetFirstViewPosition 和 CDocument::GetNextView
+virtual POSITION GetFirstViewPosition() const; 返回 第一个视图类位置 POSITIION
+virtual CView* GetNextView(POSITION&amp;amp; rPosition) const; 返回 当前 POSITION 的视图类指针
+原理:
+对于SDI，每一个视图类都会绑定一个CDocument类，所以可以在通过遍历CDocument类中所有的视图类，以便寻取需要的某一视图类指针。
+在CDocument类添加函数 CView* GetView(CRuntimeClass* pClass)
+/** * @作用 通过遍历CDocument类中所有的视图类，以便寻取需要的某一视图类指针 * @参数 CRuntimeClass* pClass 寻求的视图类 * @返回 pClass 对应的视图类指针 */ CView* GetView(CRuntimeClass* pClass){ CView* pView = NULL; POSITION pos = GetFirstViewPosition(); while(pos != NULL){ pView = GetNextView(pos); if(pView-&amp;gt;IsKindOf(pClass)) break; } return pView; } 在除App类外，可以调用CDocument类的 GetView 函数，获取需要的视图指针</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -33,5 +33,113 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Processing</title>
+      <link>https://shutongzheng.github.io/tags/processing/</link>
+      <pubDate>Tue, 26 Jan 2021 09:25:55 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>基础</title>
+      <link>https://shutongzheng.github.io/tags/%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 26 Jan 2021 09:25:55 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MFC</title>
+      <link>https://shutongzheng.github.io/tags/mfc/</link>
+      <pubDate>Wed, 20 Jan 2021 05:20:09 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/mfc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SDI</title>
+      <link>https://shutongzheng.github.io/tags/sdi/</link>
+      <pubDate>Wed, 20 Jan 2021 05:20:09 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/sdi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>多视图切换</title>
+      <link>https://shutongzheng.github.io/tags/%E5%A4%9A%E8%A7%86%E5%9B%BE%E5%88%87%E6%8D%A2/</link>
+      <pubDate>Wed, 20 Jan 2021 05:20:09 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/%E5%A4%9A%E8%A7%86%E5%9B%BE%E5%88%87%E6%8D%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>视图指针</title>
+      <link>https://shutongzheng.github.io/tags/%E8%A7%86%E5%9B%BE%E6%8C%87%E9%92%88/</link>
+      <pubDate>Wed, 20 Jan 2021 04:45:05 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/%E8%A7%86%E5%9B%BE%E6%8C%87%E9%92%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UML</title>
+      <link>https://shutongzheng.github.io/tags/uml/</link>
+      <pubDate>Mon, 18 Jan 2021 14:37:25 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/uml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://shutongzheng.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>std::cref</title>
+      <link>https://shutongzheng.github.io/tags/stdcref/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/stdcref/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>std::ref</title>
+      <link>https://shutongzheng.github.io/tags/stdref/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/stdref/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>std::thread</title>
+      <link>https://shutongzheng.github.io/tags/stdthread/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/stdthread/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>引用</title>
+      <link>https://shutongzheng.github.io/tags/%E5%BC%95%E7%94%A8/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/%E5%BC%95%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

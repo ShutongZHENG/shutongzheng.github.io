@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>std::ref on Shutong ZHENG</title>
+    <link>https://shutongzheng.github.io/tags/stdref/</link>
+    <description>Recent content in std::ref on Shutong ZHENG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 17 Jan 2021 02:11:56 +0100</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/stdref/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;11 的 std::ref 用法</title>
+      <link>https://shutongzheng.github.io/posts/windows/0x00000001/</link>
+      <pubDate>Sun, 17 Jan 2021 02:11:56 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/windows/0x00000001/</guid>
+      <description>C++11中引用 std::ref , 是为了解决一些参数传参问题
+主要解决以下两类问题：
+ 解决函数式编程传参问题，函数式编程的参数是对参数进行拷贝，而不是引用。（函数式编程的参数如果带&amp;amp;时，传参时必须用ref）  void f(int&amp;amp; n1, int&amp;amp; n2, const int&amp;amp; n3) //cref const的引用 { cout &amp;lt;&amp;lt;&amp;quot;4:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; ++n1; ++n2; cout &amp;lt;&amp;lt;&amp;quot;5:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; } int main (void){ int n1 = 1, n2 = 2, n3 = 3; cout &amp;lt;&amp;lt;&amp;quot;1:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; std::function&amp;lt;void()&amp;gt; bound_f = std::bind(f, n1, std::ref(n2), std::cref(n3)); cout &amp;lt;&amp;lt;&amp;quot;2:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; n1 = 10; n2 = 11; n3 = 12; cout &amp;lt;&amp;lt;&amp;quot;3:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; bound_f(); cout &amp;lt;&amp;lt;&amp;quot;6:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; return 0; } 结果:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Processing on Shutong ZHENG</title>
+    <link>https://shutongzheng.github.io/tags/processing/</link>
+    <description>Recent content in Processing on Shutong ZHENG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Jan 2021 09:25:55 +0100</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Processing 基础简要</title>
+      <link>https://shutongzheng.github.io/posts/windows/0x00000005/</link>
+      <pubDate>Tue, 26 Jan 2021 09:25:55 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/windows/0x00000005/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

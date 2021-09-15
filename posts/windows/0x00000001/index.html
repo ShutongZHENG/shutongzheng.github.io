@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>C&#43;&#43;11 的 std::ref 用法 // Shutong ZHENG</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Shutong ZHENG" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://shutongzheng.github.io/css/main.min.545bda4bf1babfe893ec69ca921cb30e134316c5f541129e7f725957ffd9fa36.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C&#43;&#43;11 的 std::ref 用法"/>
+<meta name="twitter:description" content="C&#43;&#43;11中引用 std::ref , 是为了解决一些参数传参问题
+主要解决以下两类问题：
+ 解决函数式编程传参问题，函数式编程的参数是对参数进行拷贝，而不是引用。（函数式编程的参数如果带&amp;时，传参时必须用ref）  void f(int&amp; n1, int&amp; n2, const int&amp; n3) //cref const的引用 { cout &lt;&lt;&quot;4:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; &#43;&#43;n1; &#43;&#43;n2; cout &lt;&lt;&quot;5:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; } int main (void){ int n1 = 1, n2 = 2, n3 = 3; cout &lt;&lt;&quot;1:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; std::function&lt;void()&gt; bound_f = std::bind(f, n1, std::ref(n2), std::cref(n3)); cout &lt;&lt;&quot;2:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; n1 = 10; n2 = 11; n3 = 12; cout &lt;&lt;&quot;3:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; bound_f(); cout &lt;&lt;&quot;6:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; return 0; } 结果:"/>
+
+    <meta property="og:title" content="C&#43;&#43;11 的 std::ref 用法" />
+<meta property="og:description" content="C&#43;&#43;11中引用 std::ref , 是为了解决一些参数传参问题
+主要解决以下两类问题：
+ 解决函数式编程传参问题，函数式编程的参数是对参数进行拷贝，而不是引用。（函数式编程的参数如果带&amp;时，传参时必须用ref）  void f(int&amp; n1, int&amp; n2, const int&amp; n3) //cref const的引用 { cout &lt;&lt;&quot;4:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; &#43;&#43;n1; &#43;&#43;n2; cout &lt;&lt;&quot;5:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; } int main (void){ int n1 = 1, n2 = 2, n3 = 3; cout &lt;&lt;&quot;1:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; std::function&lt;void()&gt; bound_f = std::bind(f, n1, std::ref(n2), std::cref(n3)); cout &lt;&lt;&quot;2:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; n1 = 10; n2 = 11; n3 = 12; cout &lt;&lt;&quot;3:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; bound_f(); cout &lt;&lt;&quot;6:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl; return 0; } 结果:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shutongzheng.github.io/posts/windows/0x00000001/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-17T02:11:56+01:00" />
+<meta property="article:modified_time" content="2021-01-17T02:11:56+01:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://shutongzheng.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Shutong ZHENG" /></a>
+      <h1>Shutong ZHENG</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>My blog.</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/ShutongZHENG" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">C&#43;&#43;11 的 std::ref 用法</h1>
+    <div class="post-meta">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+        Jan 17, 2021
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+        2 min read
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+        <a class="tag" href="https://shutongzheng.github.io/tags/c&#43;&#43;/">C&#43;&#43;</a>
+        <a class="tag" href="https://shutongzheng.github.io/tags/%E5%BC%95%E7%94%A8/">引用</a>
+      </div>
+    </div>
+  </header>
+  <div class="post-content">
+    <nav id="TableOfContents"></nav>
+    <p>C++11中引用 <code>std::ref</code> , 是为了解决一些参数传参问题</p>
+<p>主要解决以下两类问题：</p>
+<ol>
+<li>解决函数式编程传参问题，函数式编程的参数是对参数进行拷贝，而不是引用。（函数式编程的参数如果带<code>&amp;</code>时，传参时必须用<code>ref</code>）</li>
+</ol>
+<pre tabindex="0"><code>void f(int&amp; n1, int&amp; n2, const int&amp; n3)  //cref const的引用
+{
+    cout &lt;&lt;&quot;4:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl;
+    ++n1; 
+    ++n2;  
+    cout &lt;&lt;&quot;5:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl;
+
+}
+
+int main (void){
+
+int n1 = 1, n2 = 2, n3 = 3;
+cout &lt;&lt;&quot;1:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl;
+std::function&lt;void()&gt; bound_f = std::bind(f, n1, std::ref(n2), std::cref(n3));
+cout &lt;&lt;&quot;2:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl;
+n1 = 10;
+n2 = 11;
+n3 = 12;
+cout &lt;&lt;&quot;3:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl;
+bound_f();
+cout &lt;&lt;&quot;6:&quot;&lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;endl;
+return 0;
+
+}
+
+
+</code></pre><p>结果:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">n1</th>
+<th style="text-align:left">n2</th>
+<th style="text-align:left">n3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1:     </td>
+<td style="text-align:left">1    </td>
+<td style="text-align:left">2        </td>
+<td style="text-align:left">3      </td>
+</tr>
+<tr>
+<td style="text-align:left">2:</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td style="text-align:left">3:</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">11</td>
+<td style="text-align:left">12</td>
+</tr>
+<tr>
+<td style="text-align:left">4:</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">11</td>
+<td style="text-align:left">12</td>
+</tr>
+<tr>
+<td style="text-align:left">5:</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">12</td>
+</tr>
+<tr>
+<td style="text-align:left">6:</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">12</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>多线程的 <code>std::thread</code> 也是必须通过 <code>std::ref</code> 来绑定引用进行传参，否则，形参的引用声明是无效的。（多线程函数的参数带<code>&amp;</code>时，传参时必须用<code>ref</code>）</li>
+</ol>
+<pre tabindex="0"><code>#include&lt;iostream&gt;
+#include&lt;thread&gt;
+using namespace std;
+void threadFunc(int &amp;a, int b){
+    a = 10;
+    b =  1;
+}
+
+int main (void){
+    int a = 0;
+    int b = 0;
+    cout &lt;&lt;&quot;1: &quot;&lt;&lt; a &lt;&lt;&quot; &quot;&lt;&lt; b &lt;&lt;endl;
+    thread t(threadFunc,ref(a),b);
+    t.join();
+    cout &lt;&lt;&quot;2: &quot;&lt;&lt; a &lt;&lt;&quot; &quot;&lt;&lt; b &lt;&lt;endl;
+    return 0;
+}
+</code></pre><p>结果:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">a</th>
+<th style="text-align:left">b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1:   </td>
+<td style="text-align:left">0   </td>
+<td style="text-align:left">0   </td>
+</tr>
+<tr>
+<td style="text-align:left">2:   </td>
+<td style="text-align:left">10   </td>
+<td style="text-align:left">0   </td>
+</tr>
+</tbody>
+</table>
+
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script>addBackToTop({
+        diameter: 56,
+        backgroundColor: 'rgb(255, 82, 82)',
+        textColor: '#fff'
+      })
+    </script>
+
+  </div>
+  <div class="post-footer">
+    
+  </div>
+</article>
+
+    </main>
+  </body>
+</html>

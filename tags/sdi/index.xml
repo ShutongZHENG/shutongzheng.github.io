@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SDI on Shutong ZHENG</title>
+    <link>https://shutongzheng.github.io/tags/sdi/</link>
+    <description>Recent content in SDI on Shutong ZHENG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 20 Jan 2021 05:20:09 +0100</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/sdi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MFC SDI 实现多视图切换</title>
+      <link>https://shutongzheng.github.io/posts/windows/0x00000004/</link>
+      <pubDate>Wed, 20 Jan 2021 05:20:09 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/windows/0x00000004/</guid>
+      <description>在MFC SDI中视图切换是重要的一环
+原理：
+在App类的初始化函数中 定义需要切换的窗口，并在App类中添加自定义函数（进行多视图切换）
+步骤：
+ 在App类头文件，定义  private: CView* m_pOldView; CView* m_pNewView; public: CView* SwitchView(); 在App类的 InitInstance() 函数中添加以下代码 （源于Windows官方文档）   //用于获取当前视图的指针 CView *pActiveView = ((CFrameWnd *)m_pMainWnd)-&amp;gt;GetActiveView(); m_pOldView = pActiveView; m_pNewView = (CView *)new CNewView; if (NULL == m_pNewView) return FALSE; CDocument *pCurrentDoc = ((CFrameWnd *)m_pMainWnd)-&amp;gt;GetActiveDocument(); // Initialize a CCreateContext to point to the active document. // With this context, the new view is added to the document // when the view is created in CView::OnCreate().</description>
+    </item>
+    
+    <item>
+      <title>MFC 文档类 获取各视图类指针</title>
+      <link>https://shutongzheng.github.io/posts/windows/0x00000003/</link>
+      <pubDate>Wed, 20 Jan 2021 04:45:05 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/windows/0x00000003/</guid>
+      <description>在MFC中，可以通过文档类（CDocument Class）对每一视图类进行视图指针获取
+CDocument 中包含两个重要的函数 CDocument::GetFirstViewPosition 和 CDocument::GetNextView
+virtual POSITION GetFirstViewPosition() const; 返回 第一个视图类位置 POSITIION
+virtual CView* GetNextView(POSITION&amp;amp; rPosition) const; 返回 当前 POSITION 的视图类指针
+原理:
+对于SDI，每一个视图类都会绑定一个CDocument类，所以可以在通过遍历CDocument类中所有的视图类，以便寻取需要的某一视图类指针。
+在CDocument类添加函数 CView* GetView(CRuntimeClass* pClass)
+/** * @作用 通过遍历CDocument类中所有的视图类，以便寻取需要的某一视图类指针 * @参数 CRuntimeClass* pClass 寻求的视图类 * @返回 pClass 对应的视图类指针 */ CView* GetView(CRuntimeClass* pClass){ CView* pView = NULL; POSITION pos = GetFirstViewPosition(); while(pos != NULL){ pView = GetNextView(pos); if(pView-&amp;gt;IsKindOf(pClass)) break; } return pView; } 在除App类外，可以调用CDocument类的 GetView 函数，获取需要的视图指针</description>
+    </item>
+    
+  </channel>
+</rss>

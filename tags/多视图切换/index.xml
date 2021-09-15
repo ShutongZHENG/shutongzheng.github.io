@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>多视图切换 on Shutong ZHENG</title>
+    <link>https://shutongzheng.github.io/tags/%E5%A4%9A%E8%A7%86%E5%9B%BE%E5%88%87%E6%8D%A2/</link>
+    <description>Recent content in 多视图切换 on Shutong ZHENG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 20 Jan 2021 05:20:09 +0100</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/%E5%A4%9A%E8%A7%86%E5%9B%BE%E5%88%87%E6%8D%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MFC SDI 实现多视图切换</title>
+      <link>https://shutongzheng.github.io/posts/windows/0x00000004/</link>
+      <pubDate>Wed, 20 Jan 2021 05:20:09 +0100</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/windows/0x00000004/</guid>
+      <description>在MFC SDI中视图切换是重要的一环
+原理：
+在App类的初始化函数中 定义需要切换的窗口，并在App类中添加自定义函数（进行多视图切换）
+步骤：
+ 在App类头文件，定义  private: CView* m_pOldView; CView* m_pNewView; public: CView* SwitchView(); 在App类的 InitInstance() 函数中添加以下代码 （源于Windows官方文档）   //用于获取当前视图的指针 CView *pActiveView = ((CFrameWnd *)m_pMainWnd)-&amp;gt;GetActiveView(); m_pOldView = pActiveView; m_pNewView = (CView *)new CNewView; if (NULL == m_pNewView) return FALSE; CDocument *pCurrentDoc = ((CFrameWnd *)m_pMainWnd)-&amp;gt;GetActiveDocument(); // Initialize a CCreateContext to point to the active document. // With this context, the new view is added to the document // when the view is created in CView::OnCreate().</description>
+    </item>
+    
+  </channel>
+</rss>
