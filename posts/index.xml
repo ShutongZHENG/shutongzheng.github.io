@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Shutong ZHENG</title>
+    <link>https://shutongzheng.github.io/posts/</link>
+    <description>Recent content in Posts on Shutong ZHENG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Sep 2021 16:39:10 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TD1</title>
+      <link>https://shutongzheng.github.io/posts/logique/td1/</link>
+      <pubDate>Thu, 09 Sep 2021 16:39:10 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/logique/td1/</guid>
+      <description>Exo 1 La contraposée d&amp;rsquo;une formule P ⇒ Q est la formule ¬Q ⇒ ¬P, la réciproque est la formule Q ⇒ P, la contraposée de la réciproque est la formule ¬P ⇒ ¬Q.
+Q1 1. P ⇒ Q Si&#39;l est midi, alors j&#39;ai faim. 2. ¬Q ⇒ ¬P Si je n&#39;ai pas faim, alors il n&#39;est pas midi. 3. Q ⇒ P Si j&#39;ai faim, alors il est midi. 4.</description>
+    </item>
+    
+    <item>
+      <title>Cours_1 </title>
+      <link>https://shutongzheng.github.io/posts/logique/cours_1/</link>
+      <pubDate>Sun, 05 Sep 2021 21:11:36 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/logique/cours_1/</guid>
+      <description>Maitriser le langage logique 形式语言 (Langage formel) 用逻辑语言写成的陈述句 (énoncé) 将被称为形式 (formule)
+使用形式语言来编写公式, 避免自然语言的歧义和不准确的定义 形式语言比自然语言有更少的冗余, 更容易学习, 更容易实现
+原子公式 (Formule atomique) 复合公式 (Formules complexes) 复合公式由原子公式和逻辑运算符组成
+¬ P la négation d’une formule, 读作 “non P” P ∧ Q la conjonction de deux formules, 读作 “P et Q” P ∨ Q la disjonction de deux formules, 读作 “P ou Q” P ⇒ Q l’implication de deux formules, 读作 “P implique Q”
+∀ x, P 全称量化(la quantification universelle), prononcée “ pour tout x, P” ∃ x, P 存在量化(la quantification existentielle), prononcée “ il existe x tel que P”</description>
+    </item>
+    
+    <item>
+      <title>Cours_0</title>
+      <link>https://shutongzheng.github.io/posts/logique/cours_0/</link>
+      <pubDate>Fri, 03 Sep 2021 14:44:29 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/logique/cours_0/</guid>
+      <description>逻辑,真相之路 Logique 是来自于希腊语 logos(理由,语言,推理)
+陈述 (Enoncés) 逻辑操作陈述句&amp;mdash;&amp;mdash;&amp;gt;陈述句是表达的意思是 真或假
+ex. “所有的羊都有5条腿” “没有学生在逻辑课上玩手机”
+反例:
+“亨利四世白马的颜色”
+推理 (Raisonnement) 推理是一个过程(一个演绎, 一个证明), 它可以将它们(假设, 结论)之间的陈述联系起来
+Tous les hommes sont mortels or Socrate est un homme donc Socrate est mortel.
+or 三段论中用于引出小前提
+donc 引出结论
+逻辑混乱 (Chaos de la logique) 三段论(le syllogisme)
+三段论由主句、从句和结论组成
+证明 (Démonstration) 在本课程中需要严谨的证明方法并且能在计算机上执行
+数理逻辑 (Meta-mathématique) 在数理逻辑中, 数学陈述、推理是研究的对象, 例如代数中的数字、分析中的函数、向量空间
+逻辑和计算机 运用:
+布尔计算和逻辑电路之间的关系 人工智能: 会计算的计算机具备推理能力, 这就需要将推理转化为计算 建模工具: 数据库和程序开发（软件工程）领域</description>
+    </item>
+    
+  </channel>
+</rss>

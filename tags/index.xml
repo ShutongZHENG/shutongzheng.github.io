@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Shutong ZHENG</title>
+    <link>https://shutongzheng.github.io/tags/</link>
+    <description>Recent content in Tags on Shutong ZHENG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Sep 2021 16:39:10 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>logique</title>
+      <link>https://shutongzheng.github.io/tags/logique/</link>
+      <pubDate>Thu, 09 Sep 2021 16:39:10 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/logique/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>td</title>
+      <link>https://shutongzheng.github.io/tags/td/</link>
+      <pubDate>Thu, 09 Sep 2021 16:39:10 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/td/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cours</title>
+      <link>https://shutongzheng.github.io/tags/cours/</link>
+      <pubDate>Sun, 05 Sep 2021 21:11:36 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/cours/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
