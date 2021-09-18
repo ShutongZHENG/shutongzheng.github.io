@@ -5,7 +5,18 @@
     <link>https://shutongzheng.github.io/posts/</link>
     <description>Recent content in Posts on Shutong ZHENG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Sep 2021 16:39:10 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Sep 2021 16:37:14 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TD1</title>
+      <link>https://shutongzheng.github.io/posts/pfa/td1/</link>
+      <pubDate>Sat, 18 Sep 2021 16:37:14 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/pfa/td1/</guid>
+      <description>Exo1 给出下列表达式的类型
+fun x -&amp;gt; x + 1 fun x y -&amp;gt; x *. y fun x (y, z) -&amp;gt; if x then y else not z fun x -&amp;gt; x fun x y z -&amp;gt; (x &amp;lt;= y, z) Correction:
+int -&amp;gt; int float -&amp;gt; float -&amp;gt; float bool -&amp;gt; (bool * bool) -&amp;gt; bool &#39;a -&amp;gt; &#39;a &#39;a -&amp;gt; &#39;a -&amp;gt; &#39;b -&amp;gt; (bool * &#39;b) Exo2 给出 \(mystere\ 3\) 的结果</description>
+    </item>
+    
     <item>
       <title>TD1</title>
       <link>https://shutongzheng.github.io/posts/logique/td1/</link>
