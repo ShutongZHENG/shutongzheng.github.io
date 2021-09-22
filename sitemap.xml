@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shutongzheng.github.io/tags/pfa/</loc>
-    <lastmod>2021-09-18T16:37:14+02:00</lastmod>
-  </url><url>
     <loc>https://shutongzheng.github.io/posts/</loc>
-    <lastmod>2021-09-18T16:37:14+02:00</lastmod>
+    <lastmod>2021-09-22T19:50:54+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/</loc>
-    <lastmod>2021-09-18T16:37:14+02:00</lastmod>
+    <lastmod>2021-09-22T19:50:54+02:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/tags/system/</loc>
+    <lastmod>2021-09-22T19:50:54+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/tags/</loc>
+    <lastmod>2021-09-22T19:50:54+02:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/tags/tp/</loc>
+    <lastmod>2021-09-22T19:50:54+02:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/posts/system/tp1/</loc>
+    <lastmod>2021-09-22T19:50:54+02:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/tags/pfa/</loc>
     <lastmod>2021-09-18T16:37:14+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/tags/td/</loc>
@@ -20,16 +29,13 @@
     <loc>https://shutongzheng.github.io/posts/pfa/td1/</loc>
     <lastmod>2021-09-18T16:37:14+02:00</lastmod>
   </url><url>
-    <loc>https://shutongzheng.github.io/tags/logique/</loc>
-    <lastmod>2021-09-09T16:39:10+02:00</lastmod>
-  </url><url>
-    <loc>https://shutongzheng.github.io/posts/logique/td1/</loc>
-    <lastmod>2021-09-09T16:39:10+02:00</lastmod>
-  </url><url>
     <loc>https://shutongzheng.github.io/tags/cours/</loc>
     <lastmod>2021-09-05T21:11:36+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/posts/logique/cours_1/</loc>
+    <lastmod>2021-09-05T21:11:36+02:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/tags/logique/</loc>
     <lastmod>2021-09-05T21:11:36+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/posts/logique/cours_0/</loc>
@@ -85,6 +91,8 @@
   </url><url>
     <loc>https://shutongzheng.github.io/tags/%E5%BC%95%E7%94%A8/</loc>
     <lastmod>2021-01-17T02:11:56+01:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/posts/logique/td1/</loc>
   </url><url>
     <loc>https://shutongzheng.github.io/categories/</loc>
   </url>

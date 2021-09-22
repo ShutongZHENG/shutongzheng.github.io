@@ -67,7 +67,7 @@ int -&gt; int float -&gt; float -&gt; float bool -&gt; (bool * bool) -&gt; bool 
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-        1 min read
+        2 min read
       </div>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
@@ -75,7 +75,7 @@ int -&gt; int float -&gt; float -&gt; float bool -&gt; (bool * bool) -&gt; bool 
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
 </svg>
         <a class="tag" href="https://shutongzheng.github.io/tags/pfa/">PFA</a>
-        <a class="tag" href="https://shutongzheng.github.io/tags/td/">td</a>
+        <a class="tag" href="https://shutongzheng.github.io/tags/td/">TD</a>
       </div>
     </div>
   </header>
@@ -85,6 +85,7 @@ int -&gt; int float -&gt; float -&gt; float bool -&gt; (bool * bool) -&gt; bool 
     <li><a href="#exo1">Exo1</a></li>
     <li><a href="#exo2">Exo2</a></li>
     <li><a href="#exo3">Exo3</a></li>
+    <li><a href="#exo4">Exo4</a></li>
   </ul>
 </nav>
     <h2 id="exo1">Exo1</h2>
@@ -128,7 +129,14 @@ bool -&gt; (bool * bool) -&gt; bool
     <span style="color:#f92672">|</span> <span style="color:#a6e22e">C</span> <span style="color:#f92672">-&gt;</span> 5 <span style="color:#f92672">;;</span>
 </code></pre></div><p>Correction :</p>
 <pre tabindex="0"><code class="language-correction" data-lang="correction"> 类似于 B (3, C) 的这种情况没有考虑
-</code></pre>
+</code></pre><h2 id="exo4">Exo4</h2>
+<p>给出尾递归(recursive terminale)版本</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> h x y <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">if</span> x <span style="color:#f92672">=</span> y <span style="color:#66d9ef">then</span> 1
+    <span style="color:#66d9ef">else</span>
+        <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&lt;</span> y <span style="color:#66d9ef">then</span> x <span style="color:#f92672">+</span> y <span style="color:#f92672">+</span> h <span style="color:#f92672">(</span>x <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>y <span style="color:#f92672">-</span> 2<span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">else</span> x <span style="color:#f92672">*</span> h <span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> y
+</code></pre></div>
     <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script>addBackToTop({

@@ -5,7 +5,16 @@
     <link>https://shutongzheng.github.io/posts/</link>
     <description>Recent content in Posts on Shutong ZHENG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Sep 2021 16:37:14 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 19:50:54 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TP1</title>
+      <link>https://shutongzheng.github.io/posts/system/tp1/</link>
+      <pubDate>Wed, 22 Sep 2021 19:50:54 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/system/tp1/</guid>
+      <description>Exo1 Q2 cut -d &amp;#39; &amp;#39; -f 2 demo.txt Q3 head -n 23 demo.txt | tail -n 9 Q4 cat demo.txt | tr &amp;#39; &amp;#39; &amp;#39;\n&amp;#39; Q5 cat demo.txt | tr &amp;#39; &amp;#39; &amp;#39;\n&amp;#39; | sort | uniq -c Q6 grep -c &amp;#34;ABC&amp;#34; demo.txt Q7 grep &amp;#39;^[A-Z]&amp;#39; demo.txt Exo2 Q1 grep &amp;#34;Restauration&amp;#34; entreprise.txt &amp;gt; restauration.txt Q2 grep &amp;#34;^94&amp;#34; entreprise.txt Q3 grep &amp;#34;^91&amp;#34; -c entreprise.txt Q4 cut -d &amp;#39;:&amp;#39; -f 2 entreprise.</description>
+    </item>
+    
     <item>
       <title>TD1</title>
       <link>https://shutongzheng.github.io/posts/pfa/td1/</link>
@@ -15,16 +24,6 @@
       <description>Exo1 给出下列表达式的类型
 fun x -&amp;gt; x + 1 fun x y -&amp;gt; x *. y fun x (y, z) -&amp;gt; if x then y else not z fun x -&amp;gt; x fun x y z -&amp;gt; (x &amp;lt;= y, z) Correction:
 int -&amp;gt; int float -&amp;gt; float -&amp;gt; float bool -&amp;gt; (bool * bool) -&amp;gt; bool &#39;a -&amp;gt; &#39;a &#39;a -&amp;gt; &#39;a -&amp;gt; &#39;b -&amp;gt; (bool * &#39;b) Exo2 给出 \(mystere\ 3\) 的结果</description>
-    </item>
-    
-    <item>
-      <title>TD1</title>
-      <link>https://shutongzheng.github.io/posts/logique/td1/</link>
-      <pubDate>Thu, 09 Sep 2021 16:39:10 +0200</pubDate>
-      
-      <guid>https://shutongzheng.github.io/posts/logique/td1/</guid>
-      <description>Exo 1 La contraposée d&amp;rsquo;une formule P ⇒ Q est la formule ¬Q ⇒ ¬P, la réciproque est la formule Q ⇒ P, la contraposée de la réciproque est la formule ¬P ⇒ ¬Q.
-Q1 1. P ⇒ Q Si&#39;l est midi, alors j&#39;ai faim. 2. ¬Q ⇒ ¬P Si je n&#39;ai pas faim, alors il n&#39;est pas midi. 3. Q ⇒ P Si j&#39;ai faim, alors il est midi. 4.</description>
     </item>
     
     <item>
@@ -119,6 +118,16 @@ virtual CView* GetNextView(POSITION&amp;amp; rPosition) const; 返回 当前 POS
       <description>C++11中引用 std::ref , 是为了解决一些参数传参问题
 主要解决以下两类问题：
  解决函数式编程传参问题，函数式编程的参数是对参数进行拷贝，而不是引用。（函数式编程的参数如果带&amp;amp;时，传参时必须用ref）  void f(int&amp;amp; n1, int&amp;amp; n2, const int&amp;amp; n3) //cref const的引用 { cout &amp;lt;&amp;lt;&amp;quot;4:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; ++n1; ++n2; cout &amp;lt;&amp;lt;&amp;quot;5:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; } int main (void){ int n1 = 1, n2 = 2, n3 = 3; cout &amp;lt;&amp;lt;&amp;quot;1:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; std::function&amp;lt;void()&amp;gt; bound_f = std::bind(f, n1, std::ref(n2), std::cref(n3)); cout &amp;lt;&amp;lt;&amp;quot;2:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; n1 = 10; n2 = 11; n3 = 12; cout &amp;lt;&amp;lt;&amp;quot;3:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; bound_f(); cout &amp;lt;&amp;lt;&amp;quot;6:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; return 0; } 结果:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://shutongzheng.github.io/posts/logique/td1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/logique/td1/</guid>
+      <description>title: &amp;ldquo;TD1&amp;rdquo; date: 2021-09-09T16:39:10+02:00 draft: true tags: [&amp;ldquo;logique&amp;rdquo;, &amp;ldquo;td&amp;rdquo;] Exo 1 La contraposée d&amp;rsquo;une formule P ⇒ Q est la formule ¬Q ⇒ ¬P, la réciproque est la formule Q ⇒ P, la contraposée de la réciproque est la formule ¬P ⇒ ¬Q.
+Q1 1. P ⇒ Q Si&#39;l est midi, alors j&#39;ai faim. 2. ¬Q ⇒ ¬P Si je n&#39;ai pas faim, alors il n&#39;est pas midi. 3. Q ⇒ P Si j&#39;ai faim, alors il est midi.</description>
     </item>
     
   </channel>

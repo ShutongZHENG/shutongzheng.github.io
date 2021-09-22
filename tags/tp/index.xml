@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TP on Shutong ZHENG</title>
+    <link>https://shutongzheng.github.io/tags/tp/</link>
+    <description>Recent content in TP on Shutong ZHENG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 22 Sep 2021 19:50:54 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/tp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TP1</title>
+      <link>https://shutongzheng.github.io/posts/system/tp1/</link>
+      <pubDate>Wed, 22 Sep 2021 19:50:54 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/system/tp1/</guid>
+      <description>Exo1 Q2 cut -d &amp;#39; &amp;#39; -f 2 demo.txt Q3 head -n 23 demo.txt | tail -n 9 Q4 cat demo.txt | tr &amp;#39; &amp;#39; &amp;#39;\n&amp;#39; Q5 cat demo.txt | tr &amp;#39; &amp;#39; &amp;#39;\n&amp;#39; | sort | uniq -c Q6 grep -c &amp;#34;ABC&amp;#34; demo.txt Q7 grep &amp;#39;^[A-Z]&amp;#39; demo.txt Exo2 Q1 grep &amp;#34;Restauration&amp;#34; entreprise.txt &amp;gt; restauration.txt Q2 grep &amp;#34;^94&amp;#34; entreprise.txt Q3 grep &amp;#34;^91&amp;#34; -c entreprise.txt Q4 cut -d &amp;#39;:&amp;#39; -f 2 entreprise.</description>
+    </item>
+    
+  </channel>
+</rss>

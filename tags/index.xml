@@ -5,7 +5,25 @@
     <link>https://shutongzheng.github.io/tags/</link>
     <description>Recent content in Tags on Shutong ZHENG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Sep 2021 16:37:14 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 19:50:54 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System</title>
+      <link>https://shutongzheng.github.io/tags/system/</link>
+      <pubDate>Wed, 22 Sep 2021 19:50:54 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/system/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TP</title>
+      <link>https://shutongzheng.github.io/tags/tp/</link>
+      <pubDate>Wed, 22 Sep 2021 19:50:54 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/tp/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>PFA</title>
       <link>https://shutongzheng.github.io/tags/pfa/</link>
@@ -16,20 +34,11 @@
     </item>
     
     <item>
-      <title>td</title>
+      <title>TD</title>
       <link>https://shutongzheng.github.io/tags/td/</link>
       <pubDate>Sat, 18 Sep 2021 16:37:14 +0200</pubDate>
       
       <guid>https://shutongzheng.github.io/tags/td/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>logique</title>
-      <link>https://shutongzheng.github.io/tags/logique/</link>
-      <pubDate>Thu, 09 Sep 2021 16:39:10 +0200</pubDate>
-      
-      <guid>https://shutongzheng.github.io/tags/logique/</guid>
       <description></description>
     </item>
     
@@ -39,6 +48,15 @@
       <pubDate>Sun, 05 Sep 2021 21:11:36 +0200</pubDate>
       
       <guid>https://shutongzheng.github.io/tags/cours/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logique</title>
+      <link>https://shutongzheng.github.io/tags/logique/</link>
+      <pubDate>Sun, 05 Sep 2021 21:11:36 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/logique/</guid>
       <description></description>
     </item>
     
