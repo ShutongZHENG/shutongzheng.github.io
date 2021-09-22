@@ -27,6 +27,16 @@ int -&amp;gt; int float -&amp;gt; float -&amp;gt; float bool -&amp;gt; (bool * b
     </item>
     
     <item>
+      <title>TD1</title>
+      <link>https://shutongzheng.github.io/posts/logique/td1/</link>
+      <pubDate>Thu, 09 Sep 2021 16:39:10 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/logique/td1/</guid>
+      <description>Exo 1 La contraposée d&amp;rsquo;une formule P ⇒ Q est la formule ¬Q ⇒ ¬P, la réciproque est la formule Q ⇒ P, la contraposée de la réciproque est la formule ¬P ⇒ ¬Q.
+Q1 1. P ⇒ Q Si&#39;l est midi, alors j&#39;ai faim. 2. ¬Q ⇒ ¬P Si je n&#39;ai pas faim, alors il n&#39;est pas midi. 3. Q ⇒ P Si j&#39;ai faim, alors il est midi. 4.</description>
+    </item>
+    
+    <item>
       <title>Cours_1 </title>
       <link>https://shutongzheng.github.io/posts/logique/cours_1/</link>
       <pubDate>Sun, 05 Sep 2021 21:11:36 +0200</pubDate>
@@ -118,16 +128,6 @@ virtual CView* GetNextView(POSITION&amp;amp; rPosition) const; 返回 当前 POS
       <description>C++11中引用 std::ref , 是为了解决一些参数传参问题
 主要解决以下两类问题：
  解决函数式编程传参问题，函数式编程的参数是对参数进行拷贝，而不是引用。（函数式编程的参数如果带&amp;amp;时，传参时必须用ref）  void f(int&amp;amp; n1, int&amp;amp; n2, const int&amp;amp; n3) //cref const的引用 { cout &amp;lt;&amp;lt;&amp;quot;4:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; ++n1; ++n2; cout &amp;lt;&amp;lt;&amp;quot;5:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; } int main (void){ int n1 = 1, n2 = 2, n3 = 3; cout &amp;lt;&amp;lt;&amp;quot;1:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; std::function&amp;lt;void()&amp;gt; bound_f = std::bind(f, n1, std::ref(n2), std::cref(n3)); cout &amp;lt;&amp;lt;&amp;quot;2:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; n1 = 10; n2 = 11; n3 = 12; cout &amp;lt;&amp;lt;&amp;quot;3:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; bound_f(); cout &amp;lt;&amp;lt;&amp;quot;6:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; return 0; } 结果:</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://shutongzheng.github.io/posts/logique/td1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://shutongzheng.github.io/posts/logique/td1/</guid>
-      <description>title: &amp;ldquo;TD1&amp;rdquo; date: 2021-09-09T16:39:10+02:00 draft: true tags: [&amp;ldquo;logique&amp;rdquo;, &amp;ldquo;td&amp;rdquo;] Exo 1 La contraposée d&amp;rsquo;une formule P ⇒ Q est la formule ¬Q ⇒ ¬P, la réciproque est la formule Q ⇒ P, la contraposée de la réciproque est la formule ¬P ⇒ ¬Q.
-Q1 1. P ⇒ Q Si&#39;l est midi, alors j&#39;ai faim. 2. ¬Q ⇒ ¬P Si je n&#39;ai pas faim, alors il n&#39;est pas midi. 3. Q ⇒ P Si j&#39;ai faim, alors il est midi.</description>
     </item>
     
   </channel>

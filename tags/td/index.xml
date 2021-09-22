@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TD on Shutong ZHENG</title>
+    <title>td on Shutong ZHENG</title>
     <link>https://shutongzheng.github.io/tags/td/</link>
-    <description>Recent content in TD on Shutong ZHENG</description>
+    <description>Recent content in td on Shutong ZHENG</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 18 Sep 2021 16:37:14 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/td/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -15,6 +15,16 @@
       <description>Exo1 给出下列表达式的类型
 fun x -&amp;gt; x + 1 fun x y -&amp;gt; x *. y fun x (y, z) -&amp;gt; if x then y else not z fun x -&amp;gt; x fun x y z -&amp;gt; (x &amp;lt;= y, z) Correction:
 int -&amp;gt; int float -&amp;gt; float -&amp;gt; float bool -&amp;gt; (bool * bool) -&amp;gt; bool &#39;a -&amp;gt; &#39;a &#39;a -&amp;gt; &#39;a -&amp;gt; &#39;b -&amp;gt; (bool * &#39;b) Exo2 给出 \(mystere\ 3\) 的结果</description>
+    </item>
+    
+    <item>
+      <title>TD1</title>
+      <link>https://shutongzheng.github.io/posts/logique/td1/</link>
+      <pubDate>Thu, 09 Sep 2021 16:39:10 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/logique/td1/</guid>
+      <description>Exo 1 La contraposée d&amp;rsquo;une formule P ⇒ Q est la formule ¬Q ⇒ ¬P, la réciproque est la formule Q ⇒ P, la contraposée de la réciproque est la formule ¬P ⇒ ¬Q.
+Q1 1. P ⇒ Q Si&#39;l est midi, alors j&#39;ai faim. 2. ¬Q ⇒ ¬P Si je n&#39;ai pas faim, alors il n&#39;est pas midi. 3. Q ⇒ P Si j&#39;ai faim, alors il est midi. 4.</description>
     </item>
     
   </channel>

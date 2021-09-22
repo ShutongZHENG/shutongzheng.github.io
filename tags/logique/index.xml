@@ -5,7 +5,17 @@
     <link>https://shutongzheng.github.io/tags/logique/</link>
     <description>Recent content in logique on Shutong ZHENG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 Sep 2021 21:11:36 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/logique/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Sep 2021 16:39:10 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/logique/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TD1</title>
+      <link>https://shutongzheng.github.io/posts/logique/td1/</link>
+      <pubDate>Thu, 09 Sep 2021 16:39:10 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/logique/td1/</guid>
+      <description>Exo 1 La contraposée d&amp;rsquo;une formule P ⇒ Q est la formule ¬Q ⇒ ¬P, la réciproque est la formule Q ⇒ P, la contraposée de la réciproque est la formule ¬P ⇒ ¬Q.
+Q1 1. P ⇒ Q Si&#39;l est midi, alors j&#39;ai faim. 2. ¬Q ⇒ ¬P Si je n&#39;ai pas faim, alors il n&#39;est pas midi. 3. Q ⇒ P Si j&#39;ai faim, alors il est midi. 4.</description>
+    </item>
+    
     <item>
       <title>Cours_1 </title>
       <link>https://shutongzheng.github.io/posts/logique/cours_1/</link>
