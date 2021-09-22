@@ -73,15 +73,6 @@ donc 引出结论
     </item>
     
     <item>
-      <title>Processing 基础简要</title>
-      <link>https://shutongzheng.github.io/posts/windows/0x00000005/</link>
-      <pubDate>Tue, 26 Jan 2021 09:25:55 +0100</pubDate>
-      
-      <guid>https://shutongzheng.github.io/posts/windows/0x00000005/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>MFC SDI 实现多视图切换</title>
       <link>https://shutongzheng.github.io/posts/windows/0x00000004/</link>
       <pubDate>Wed, 20 Jan 2021 05:20:09 +0100</pubDate>
@@ -128,6 +119,15 @@ virtual CView* GetNextView(POSITION&amp;amp; rPosition) const; 返回 当前 POS
       <description>C++11中引用 std::ref , 是为了解决一些参数传参问题
 主要解决以下两类问题：
  解决函数式编程传参问题，函数式编程的参数是对参数进行拷贝，而不是引用。（函数式编程的参数如果带&amp;amp;时，传参时必须用ref）  void f(int&amp;amp; n1, int&amp;amp; n2, const int&amp;amp; n3) //cref const的引用 { cout &amp;lt;&amp;lt;&amp;quot;4:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; ++n1; ++n2; cout &amp;lt;&amp;lt;&amp;quot;5:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; } int main (void){ int n1 = 1, n2 = 2, n3 = 3; cout &amp;lt;&amp;lt;&amp;quot;1:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; std::function&amp;lt;void()&amp;gt; bound_f = std::bind(f, n1, std::ref(n2), std::cref(n3)); cout &amp;lt;&amp;lt;&amp;quot;2:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; n1 = 10; n2 = 11; n3 = 12; cout &amp;lt;&amp;lt;&amp;quot;3:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; bound_f(); cout &amp;lt;&amp;lt;&amp;quot;6:&amp;quot;&amp;lt;&amp;lt; n1 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n2 &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; n3 &amp;lt;&amp;lt;endl; return 0; } 结果:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://shutongzheng.github.io/posts/windows/0x00000005/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/windows/0x00000005/</guid>
+      <description>title: &amp;ldquo;Processing 基础简要&amp;rdquo; date: 2021-01-26T09:25:55+01:00 draft: true tags: [&amp;ldquo;Processing&amp;rdquo;,&amp;ldquo;基础&amp;rdquo;] DEMO</description>
     </item>
     
   </channel>
