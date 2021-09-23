@@ -135,7 +135,15 @@ bool -&gt; (bool * bool) -&gt; bool
     <span style="color:#66d9ef">if</span> x <span style="color:#f92672">=</span> y <span style="color:#66d9ef">then</span> 1
     <span style="color:#66d9ef">else</span>
         <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&lt;</span> y <span style="color:#66d9ef">then</span> x <span style="color:#f92672">+</span> y <span style="color:#f92672">+</span> h <span style="color:#f92672">(</span>x <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>y <span style="color:#f92672">-</span> 2<span style="color:#f92672">)</span>
-        <span style="color:#66d9ef">else</span> x <span style="color:#f92672">*</span> h <span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> y
+        <span style="color:#66d9ef">else</span> x <span style="color:#f92672">*</span> h <span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> y <span style="color:#f92672">;;</span>
+</code></pre></div><p>Correction:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> h x y <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> h1 x y acc <span style="color:#f92672">=</span> 
+    <span style="color:#66d9ef">if</span> x <span style="color:#f92672">=</span> y <span style="color:#66d9ef">then</span> acc
+    <span style="color:#66d9ef">else</span> 
+        <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&lt;</span> y <span style="color:#66d9ef">then</span> h1 <span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>y<span style="color:#f92672">-</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>y<span style="color:#f92672">+</span>acc<span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">else</span> h1 <span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> y <span style="color:#f92672">(</span>x<span style="color:#f92672">*</span>acc<span style="color:#f92672">)</span>
+<span style="color:#66d9ef">in</span> h1 x y 1 <span style="color:#f92672">;;</span>
 </code></pre></div>
     <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
