@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>TD2 // Shutong ZHENG</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Shutong ZHENG" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://shutongzheng.github.io/css/main.min.545bda4bf1babfe893ec69ca921cb30e134316c5f541129e7f725957ffd9fa36.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TD2"/>
+<meta name="twitter:description" content="Exo1 let f1 x g z = if x then g x else g z Correction:
+bool -&gt; (bool -&gt; &#39;a) -&gt; bool -&gt; &#39;a let f2 f g x = if f x then g x Correction:
+(&#39;a -&gt; bool) -&gt; (&#39;a -&gt; unit) -&gt; &#39;a -&gt; unit let f3 g x y = if g x then g y elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; let rec f4 x y = f4 y ([]::x) &#39;a list list -&gt; &#39;a list list -&gt; &#39;b 编译器不知道 会输出什么 所以就随便输出了个 &#39;b "/>
+
+    <meta property="og:title" content="TD2" />
+<meta property="og:description" content="Exo1 let f1 x g z = if x then g x else g z Correction:
+bool -&gt; (bool -&gt; &#39;a) -&gt; bool -&gt; &#39;a let f2 f g x = if f x then g x Correction:
+(&#39;a -&gt; bool) -&gt; (&#39;a -&gt; unit) -&gt; &#39;a -&gt; unit let f3 g x y = if g x then g y elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; let rec f4 x y = f4 y ([]::x) &#39;a list list -&gt; &#39;a list list -&gt; &#39;b 编译器不知道 会输出什么 所以就随便输出了个 &#39;b " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shutongzheng.github.io/posts/pfa/td2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-25T11:47:17+02:00" />
+<meta property="article:modified_time" content="2021-09-25T11:47:17+02:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://shutongzheng.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Shutong ZHENG" /></a>
+      <h1>Shutong ZHENG</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>My blog.</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/ShutongZHENG" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">TD2</h1>
+    <div class="post-meta">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+        Sep 25, 2021
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+        1 min read
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+        <a class="tag" href="https://shutongzheng.github.io/tags/pfa/">PFA</a>
+        <a class="tag" href="https://shutongzheng.github.io/tags/td/">td</a>
+      </div>
+    </div>
+  </header>
+  <div class="post-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#exo1">Exo1</a></li>
+  </ul>
+</nav>
+    <h2 id="exo1">Exo1</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> f1 x g z <span style="color:#f92672">=</span> <span style="color:#66d9ef">if</span> x <span style="color:#66d9ef">then</span> g x <span style="color:#66d9ef">else</span> g z
+</code></pre></div><p>Correction:</p>
+<pre tabindex="0"><code class="language-Correction" data-lang="Correction">bool -&gt; (bool -&gt; 'a) -&gt; bool -&gt; 'a
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> f2 f g x <span style="color:#f92672">=</span> <span style="color:#66d9ef">if</span> f x <span style="color:#66d9ef">then</span> g x
+</code></pre></div><p>Correction:</p>
+<pre tabindex="0"><code class="language-Correction" data-lang="Correction">('a -&gt; bool) -&gt; ('a -&gt; unit) -&gt; 'a -&gt; unit
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> f3 g x y <span style="color:#f92672">=</span> <span style="color:#66d9ef">if</span> g x <span style="color:#66d9ef">then</span> g y
+</code></pre></div><pre tabindex="0"><code class="language-Correction" data-lang="Correction">elle n'est pas bien typée. Parce que il n'y pas de &quot;else&quot;
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> f4 x y <span style="color:#f92672">=</span> f4 y <span style="color:#f92672">(</span>[]<span style="color:#f92672">::</span>x<span style="color:#f92672">)</span>
+</code></pre></div><pre tabindex="0"><code class="language-Correction" data-lang="Correction">'a list list -&gt; 'a list list -&gt; 'b
+编译器不知道 会输出什么 所以就随便输出了个 'b
+</code></pre>
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script>addBackToTop({
+        diameter: 56,
+        backgroundColor: 'rgb(255, 82, 82)',
+        textColor: '#fff'
+      })
+    </script>
+
+  </div>
+  <div class="post-footer">
+    
+  </div>
+</article>
+
+    </main>
+  </body>
+</html>

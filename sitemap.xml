@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://shutongzheng.github.io/tags/pfa/</loc>
+    <lastmod>2021-09-25T11:47:17+02:00</lastmod>
+  </url><url>
     <loc>https://shutongzheng.github.io/posts/</loc>
-    <lastmod>2021-09-22T19:50:54+02:00</lastmod>
+    <lastmod>2021-09-25T11:47:17+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/</loc>
-    <lastmod>2021-09-22T19:50:54+02:00</lastmod>
-  </url><url>
-    <loc>https://shutongzheng.github.io/tags/system/</loc>
-    <lastmod>2021-09-22T19:50:54+02:00</lastmod>
+    <lastmod>2021-09-25T11:47:17+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/tags/</loc>
+    <lastmod>2021-09-25T11:47:17+02:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/tags/td/</loc>
+    <lastmod>2021-09-25T11:47:17+02:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/posts/pfa/td2/</loc>
+    <lastmod>2021-09-25T11:47:17+02:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/tags/system/</loc>
     <lastmod>2021-09-22T19:50:54+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/tags/tp/</loc>
@@ -19,12 +28,6 @@
   </url><url>
     <loc>https://shutongzheng.github.io/posts/system/tp1/</loc>
     <lastmod>2021-09-22T19:50:54+02:00</lastmod>
-  </url><url>
-    <loc>https://shutongzheng.github.io/tags/pfa/</loc>
-    <lastmod>2021-09-18T16:37:14+02:00</lastmod>
-  </url><url>
-    <loc>https://shutongzheng.github.io/tags/td/</loc>
-    <lastmod>2021-09-18T16:37:14+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/posts/pfa/td1/</loc>
     <lastmod>2021-09-18T16:37:14+02:00</lastmod>
