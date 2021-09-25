@@ -15,12 +15,14 @@
 <meta name="twitter:title" content="TD2"/>
 <meta name="twitter:description" content="Exo1 let f1 x g z = if x then g x else g z Correction:
 bool -&gt; (bool -&gt; &#39;a) -&gt; bool -&gt; &#39;a let f2 f g x = if f x then g x Correction:
-(&#39;a -&gt; bool) -&gt; (&#39;a -&gt; unit) -&gt; &#39;a -&gt; unit let f3 g x y = if g x then g y elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; let rec f4 x y = f4 y ([]::x) &#39;a list list -&gt; &#39;a list list -&gt; &#39;b 编译器不知道 会输出什么 所以就随便输出了个 &#39;b "/>
+(&#39;a -&gt; bool) -&gt; (&#39;a -&gt; unit) -&gt; &#39;a -&gt; unit let f3 g x y = if g x then g y Correction:
+elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; let rec f4 x y = f4 y ([]::x) Correction:"/>
 
     <meta property="og:title" content="TD2" />
 <meta property="og:description" content="Exo1 let f1 x g z = if x then g x else g z Correction:
 bool -&gt; (bool -&gt; &#39;a) -&gt; bool -&gt; &#39;a let f2 f g x = if f x then g x Correction:
-(&#39;a -&gt; bool) -&gt; (&#39;a -&gt; unit) -&gt; &#39;a -&gt; unit let f3 g x y = if g x then g y elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; let rec f4 x y = f4 y ([]::x) &#39;a list list -&gt; &#39;a list list -&gt; &#39;b 编译器不知道 会输出什么 所以就随便输出了个 &#39;b " />
+(&#39;a -&gt; bool) -&gt; (&#39;a -&gt; unit) -&gt; &#39;a -&gt; unit let f3 g x y = if g x then g y Correction:
+elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; let rec f4 x y = f4 y ([]::x) Correction:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://shutongzheng.github.io/posts/pfa/td2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-09-25T11:47:17+02:00" />
@@ -93,9 +95,11 @@ bool -&gt; (bool -&gt; &#39;a) -&gt; bool -&gt; &#39;a let f2 f g x = if f x the
 </code></pre></div><p>Correction:</p>
 <pre tabindex="0"><code class="language-Correction" data-lang="Correction">('a -&gt; bool) -&gt; ('a -&gt; unit) -&gt; 'a -&gt; unit
 </code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> f3 g x y <span style="color:#f92672">=</span> <span style="color:#66d9ef">if</span> g x <span style="color:#66d9ef">then</span> g y
-</code></pre></div><pre tabindex="0"><code class="language-Correction" data-lang="Correction">elle n'est pas bien typée. Parce que il n'y pas de &quot;else&quot;
+</code></pre></div><p>Correction:</p>
+<pre tabindex="0"><code class="language-Correction" data-lang="Correction">elle n'est pas bien typée. Parce que il n'y pas de &quot;else&quot;
 </code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> f4 x y <span style="color:#f92672">=</span> f4 y <span style="color:#f92672">(</span>[]<span style="color:#f92672">::</span>x<span style="color:#f92672">)</span>
-</code></pre></div><pre tabindex="0"><code class="language-Correction" data-lang="Correction">'a list list -&gt; 'a list list -&gt; 'b
+</code></pre></div><p>Correction:</p>
+<pre tabindex="0"><code class="language-Correction" data-lang="Correction">'a list list -&gt; 'a list list -&gt; 'b
 编译器不知道 会输出什么 所以就随便输出了个 'b
 </code></pre>
     <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
