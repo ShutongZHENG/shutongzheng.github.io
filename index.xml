@@ -12,10 +12,10 @@
       <pubDate>Sat, 25 Sep 2021 11:47:17 +0200</pubDate>
       
       <guid>https://shutongzheng.github.io/posts/pfa/td2/</guid>
-      <description>Exo1 let f1 x g z = if x then g x else g z Correction:
-bool -&amp;gt; (bool -&amp;gt; &#39;a) -&amp;gt; bool -&amp;gt; &#39;a let f2 f g x = if f x then g x Correction:
-(&#39;a -&amp;gt; bool) -&amp;gt; (&#39;a -&amp;gt; unit) -&amp;gt; &#39;a -&amp;gt; unit let f3 g x y = if g x then g y Correction:
-elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &amp;quot;else&amp;quot; let rec f4 x y = f4 y ([]::x) Correction:</description>
+      <description>Exo1 Q1 let f1 x g z = if x then g x else g z Correction:
+bool -&amp;gt; (bool -&amp;gt; &#39;a) -&amp;gt; bool -&amp;gt; &#39;a Q2 let f2 f g x = if f x then g x Correction:
+(&#39;a -&amp;gt; bool) -&amp;gt; (&#39;a -&amp;gt; unit) -&amp;gt; &#39;a -&amp;gt; unit Q3 let f3 g x y = if g x then g y Correction:
+elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &amp;quot;else&amp;quot; Q4 let rec f4 x y = f4 y ([]::x) Correction:</description>
     </item>
     
     <item>
