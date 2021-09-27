@@ -69,7 +69,7 @@ elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; Q4 
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-        1 min read
+        2 min read
       </div>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
@@ -92,6 +92,23 @@ elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; Q4 
         <li><a href="#q4">Q4</a></li>
       </ul>
     </li>
+    <li><a href="#exo2">Exo2</a>
+      <ul>
+        <li><a href="#q1-1">Q1</a></li>
+        <li><a href="#q2-1">Q2</a></li>
+        <li><a href="#q3-1">Q3</a></li>
+      </ul>
+    </li>
+    <li><a href="#exo3">Exo3</a>
+      <ul>
+        <li><a href="#q4-1">Q4</a></li>
+        <li><a href="#q5">Q5</a></li>
+        <li><a href="#q6">Q6</a></li>
+        <li><a href="#q7">Q7</a></li>
+        <li><a href="#q8">Q8</a></li>
+        <li><a href="#q9">Q9</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     <h2 id="exo1">Exo1</h2>
@@ -112,7 +129,77 @@ elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; Q4 
 </code></pre></div><p>Correction:</p>
 <pre tabindex="0"><code class="language-Correction" data-lang="Correction">'a list list -&gt; 'a list list -&gt; 'b
 编译器不知道 会输出什么 所以就随便输出了个 'b
-</code></pre>
+</code></pre><h2 id="exo2">Exo2</h2>
+<h3 id="q1-1">Q1</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> somme_carre n <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> somme_carre_acc n acc <span style="color:#f92672">=</span>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> 1 <span style="color:#66d9ef">then</span> acc
+        <span style="color:#66d9ef">else</span> somme_carre_acc <span style="color:#f92672">(</span>n<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>acc<span style="color:#f92672">+</span>n<span style="color:#f92672">*</span>n<span style="color:#f92672">)</span>
+<span style="color:#66d9ef">in</span> somme_carre_acc n 1 <span style="color:#f92672">;;</span>
+</code></pre></div><h3 id="q2-1">Q2</h3>
+<p>récursive terminale</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> somme l <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> somme_acc l acc <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">match</span> l <span style="color:#66d9ef">with</span>
+    <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> acc
+    <span style="color:#f92672">|</span> x <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> somme_acc s <span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>acc<span style="color:#f92672">)</span>
+<span style="color:#66d9ef">in</span> somme_acc l 0 <span style="color:#f92672">;;</span>
+</code></pre></div><p>CPS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> somme l <span style="color:#f92672">=</span> 
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> somme_cps l cont <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">match</span> l <span style="color:#66d9ef">with</span>
+    <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> cont 0
+    <span style="color:#f92672">|</span> x <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> somme_cps s <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> r <span style="color:#f92672">-&gt;</span> cont <span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>r<span style="color:#f92672">))</span>
+    <span style="color:#66d9ef">in</span>
+    somme_cps l <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x <span style="color:#f92672">-&gt;</span> x<span style="color:#f92672">)</span> <span style="color:#f92672">;;</span>
+</code></pre></div><h3 id="q3-1">Q3</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> fib n <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> fib_cps n cont <span style="color:#f92672">=</span>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> 1 <span style="color:#66d9ef">then</span> cont n
+        <span style="color:#66d9ef">else</span> fib_cps <span style="color:#f92672">(</span>n<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> r <span style="color:#f92672">-&gt;</span> cont r<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> fib_cps <span style="color:#f92672">(</span>n<span style="color:#f92672">-</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> r <span style="color:#f92672">-&gt;</span> cont r<span style="color:#f92672">)</span>
+<span style="color:#66d9ef">in</span>  
+fib_cps n <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x <span style="color:#f92672">-&gt;</span> x<span style="color:#f92672">)</span>
+
+</code></pre></div><h2 id="exo3">Exo3</h2>
+<h3 id="q4-1">Q4</h3>
+<p>()(())</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#f92672">[</span><span style="color:#a6e22e">PO</span><span style="color:#f92672">;</span> <span style="color:#a6e22e">PF</span><span style="color:#f92672">;</span> <span style="color:#a6e22e">PO</span><span style="color:#f92672">;</span> <span style="color:#a6e22e">PO</span><span style="color:#f92672">;</span> <span style="color:#a6e22e">PF</span><span style="color:#f92672">;</span> <span style="color:#a6e22e">PF</span><span style="color:#f92672">]</span>
+</code></pre></div><p>(()(</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#f92672">[</span><span style="color:#a6e22e">PO</span><span style="color:#f92672">;</span> <span style="color:#a6e22e">PO</span><span style="color:#f92672">;</span> <span style="color:#a6e22e">PF</span><span style="color:#f92672">;</span> <span style="color:#a6e22e">PO</span><span style="color:#f92672">]</span>
+</code></pre></div><h3 id="q5">Q5</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> ouvrante_ou_fermante cpt p <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">if</span> p <span style="color:#f92672">=</span> <span style="color:#a6e22e">PO</span> <span style="color:#66d9ef">then</span> <span style="color:#f92672">(</span>cpt<span style="color:#f92672">+</span>1<span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">else</span> <span style="color:#f92672">(</span>cpt<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span>
+</code></pre></div><h3 id="q6">Q6</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> compte nb m  <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">match</span> m <span style="color:#66d9ef">with</span>
+    <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> []
+    <span style="color:#f92672">|</span> x <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">(</span>ouvrante_ou_fermante nb x<span style="color:#f92672">)</span> <span style="color:#f92672">::</span> compte <span style="color:#f92672">(</span>ouvrante_ou_fermante nb x<span style="color:#f92672">)</span> s
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> compte nb m  <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">match</span> m <span style="color:#66d9ef">with</span>
+    <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> []
+    <span style="color:#f92672">|</span> x <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">let</span> nbs <span style="color:#f92672">=</span> ouvrante_ou_fermante nb x <span style="color:#66d9ef">in</span>
+     nbs <span style="color:#f92672">::</span> compte nbs s
+
+<span style="color:#66d9ef">let</span> compte_parentheses m <span style="color:#f92672">=</span> compte 0 m <span style="color:#f92672">;;</span>
+</code></pre></div><h3 id="q7">Q7</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> tous_positifs l <span style="color:#f92672">=</span> 
+   <span style="color:#66d9ef">match</span> l <span style="color:#66d9ef">with</span> 
+   <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> true
+   <span style="color:#f92672">|</span> x <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> tous_positifs s
+   <span style="color:#f92672">;;</span>
+
+</code></pre></div><h3 id="q8">Q8</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> dernier_a_zero l <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">match</span> List.rev l <span style="color:#66d9ef">with</span>
+    <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> false
+    <span style="color:#f92672">|</span> x <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">=</span> 0 
+    <span style="color:#f92672">;;</span> 
+</code></pre></div><h3 id="q9">Q9</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> est_un_mot_de_dyck m <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">list</span> <span style="color:#f92672">=</span> compte_parentheses m <span style="color:#66d9ef">in</span>
+    tous_positifs <span style="color:#66d9ef">list</span> <span style="color:#f92672">&amp;&amp;</span> dernier_a_zero <span style="color:#66d9ef">list</span>
+    <span style="color:#f92672">;;</span></code></pre></div>
     <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script>addBackToTop({
