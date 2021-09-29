@@ -69,7 +69,7 @@ elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; Q4 
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-        2 min read
+        3 min read
       </div>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
@@ -107,6 +107,16 @@ elle n&#39;est pas bien typée. Parce que il n&#39;y pas de &quot;else&quot; Q4 
         <li><a href="#q7">Q7</a></li>
         <li><a href="#q8">Q8</a></li>
         <li><a href="#q9">Q9</a></li>
+        <li><a href="#q10">Q10</a></li>
+      </ul>
+    </li>
+    <li><a href="#exo4">Exo4</a>
+      <ul>
+        <li><a href="#q11">Q11</a></li>
+        <li><a href="#q12">Q12</a></li>
+        <li><a href="#q13">Q13</a></li>
+        <li><a href="#q14">Q14</a></li>
+        <li><a href="#q15">Q15</a></li>
       </ul>
     </li>
   </ul>
@@ -199,7 +209,48 @@ fib_cps n <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</s
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> est_un_mot_de_dyck m <span style="color:#f92672">=</span>
     <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">list</span> <span style="color:#f92672">=</span> compte_parentheses m <span style="color:#66d9ef">in</span>
     tous_positifs <span style="color:#66d9ef">list</span> <span style="color:#f92672">&amp;&amp;</span> dernier_a_zero <span style="color:#66d9ef">list</span>
-    <span style="color:#f92672">;;</span></code></pre></div>
+    <span style="color:#f92672">;;</span>
+</code></pre></div><h3 id="q10">Q10</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> sommet m <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">list</span> <span style="color:#f92672">=</span> compte_parentheses m <span style="color:#66d9ef">in</span>
+    List.fold_left <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x y <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> y <span style="color:#66d9ef">then</span> x <span style="color:#66d9ef">else</span> y<span style="color:#f92672">)</span> 0 <span style="color:#66d9ef">list</span> 
+    <span style="color:#f92672">;;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> sommet m <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">list</span> <span style="color:#f92672">=</span> compte_parentheses m <span style="color:#66d9ef">in</span>
+    List.fold_left max 0 <span style="color:#66d9ef">list</span> 
+    <span style="color:#f92672">;;</span>
+</code></pre></div><h2 id="exo4">Exo4</h2>
+<h3 id="q11">Q11</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> list_of_int n <span style="color:#f92672">=</span>f
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> list_of_int_acc acc <span style="color:#f92672">=</span>
+        <span style="color:#66d9ef">if</span> acc <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>n<span style="color:#f92672">+</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">||</span> n <span style="color:#f92672">&lt;=</span> 0 <span style="color:#66d9ef">then</span> []
+        <span style="color:#66d9ef">else</span> acc <span style="color:#f92672">::</span> list_of_int_acc <span style="color:#f92672">(</span>acc<span style="color:#f92672">+</span>1<span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">in</span> 
+    list_of_int_acc  1
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> list_of_int n <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> list_of_int_acc n acc <span style="color:#f92672">=</span>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> 0 <span style="color:#66d9ef">then</span> acc
+        <span style="color:#66d9ef">else</span> list_of_int_acc <span style="color:#f92672">(</span>n<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">::</span> acc<span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">in</span>
+    list_of_int_acc n [] <span style="color:#f92672">;;</span>
+</code></pre></div><h3 id="q12">Q12</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> succ_list l <span style="color:#f92672">=</span> List.map <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x <span style="color:#f92672">-&gt;</span> x<span style="color:#f92672">+</span>1<span style="color:#f92672">)</span> l <span style="color:#f92672">;;</span>
+<span style="color:#66d9ef">let</span> pred_list l <span style="color:#f92672">=</span> List.map <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x <span style="color:#f92672">-&gt;</span> x<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> l <span style="color:#f92672">;;</span>
+</code></pre></div><h3 id="q13">Q13</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> diff l1 l2 <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> diff_acc l1 l2 acc <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">match</span> l1 <span style="color:#66d9ef">with</span>
+    <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> acc
+    <span style="color:#f92672">|</span> x <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">if</span> not <span style="color:#f92672">(</span>List.mem x l2 <span style="color:#f92672">)</span> <span style="color:#66d9ef">then</span> diff_acc s l2 <span style="color:#f92672">(</span>x<span style="color:#f92672">::</span>acc<span style="color:#f92672">)</span>
+                <span style="color:#66d9ef">else</span> diff_acc s l2 acc
+    <span style="color:#66d9ef">in</span>
+
+    diff_acc l1 l2 [] <span style="color:#f92672">;;</span>
+</code></pre></div><h3 id="q14">Q14</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> remove l x <span style="color:#f92672">=</span> List.filter <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> a <span style="color:#f92672">-&gt;</span>  not <span style="color:#f92672">(</span>a <span style="color:#f92672">=</span> x<span style="color:#f92672">))</span> l
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> remove l x  <span style="color:#f92672">=</span> List.fold_left <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> acc y <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">if</span> not <span style="color:#f92672">(</span>y <span style="color:#f92672">=</span> x<span style="color:#f92672">)</span> <span style="color:#66d9ef">then</span> y <span style="color:#f92672">::</span> acc <span style="color:#66d9ef">else</span> acc<span style="color:#f92672">)</span> [] l
+</code></pre></div><h3 id="q15">Q15</h3>
+
     <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script>addBackToTop({
