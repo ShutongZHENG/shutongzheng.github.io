@@ -5,22 +5,31 @@
     <link>https://shutongzheng.github.io/tags/</link>
     <description>Recent content in Tags on Shutong ZHENG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 25 Sep 2021 11:47:17 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Sep 2021 20:51:10 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algo</title>
+      <link>https://shutongzheng.github.io/tags/algo/</link>
+      <pubDate>Wed, 29 Sep 2021 20:51:10 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/algo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TD</title>
+      <link>https://shutongzheng.github.io/tags/td/</link>
+      <pubDate>Wed, 29 Sep 2021 20:51:10 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/tags/td/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>PFA</title>
       <link>https://shutongzheng.github.io/tags/pfa/</link>
       <pubDate>Sat, 25 Sep 2021 11:47:17 +0200</pubDate>
       
       <guid>https://shutongzheng.github.io/tags/pfa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>td</title>
-      <link>https://shutongzheng.github.io/tags/td/</link>
-      <pubDate>Sat, 25 Sep 2021 11:47:17 +0200</pubDate>
-      
-      <guid>https://shutongzheng.github.io/tags/td/</guid>
       <description></description>
     </item>
     

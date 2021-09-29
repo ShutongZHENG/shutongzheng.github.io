@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algo on Shutong ZHENG</title>
+    <link>https://shutongzheng.github.io/tags/algo/</link>
+    <description>Recent content in Algo on Shutong ZHENG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 29 Sep 2021 20:51:10 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/algo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TD1</title>
+      <link>https://shutongzheng.github.io/posts/algo/td1/</link>
+      <pubDate>Wed, 29 Sep 2021 20:51:10 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/algo/td1/</guid>
+      <description>Exo1 Equivalents Q1 </description>
+    </item>
+    
+  </channel>
+</rss>
