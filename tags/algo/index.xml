@@ -12,7 +12,12 @@
       <pubDate>Wed, 29 Sep 2021 20:51:10 +0200</pubDate>
       
       <guid>https://shutongzheng.github.io/posts/algo/td1/</guid>
-      <description>Exo1 Equivalents Q1 </description>
+      <description>Exo1 Equivalents Q1 equivalement simple = \(4n^2\) ordre de grandeur = \(n^2\)
+Q2 complexite = 1
+Q3 \(\sum_{i=1}^{n} i = \frac {n(1+n)}{2} = \frac {n^{2}+n} {2}\qquad \) ordre de grandeur = \(n^{2}\)
+\(\sum_{i=1}^{n} i^{2} = \frac {n(n+1)(2n+1)}{6}\qquad \) ordre de grandeur = \( n^{3}\)
+\(\sum_{i=1}^{n} i^{3} = (\frac {n(1+n)}{2} )^{2} \approx \frac {n^{4}} {4}\qquad \) ordre de grandeur = \( n^{4}\)
+\(\sum_{i=1}^{n} i^{k} \approx \frac {n^{k+1}} {k+1} \qquad \) ordre de grandeur = \( n^{k+1}\)</description>
     </item>
     
   </channel>

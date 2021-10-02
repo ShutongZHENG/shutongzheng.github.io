@@ -5,14 +5,28 @@
     <link>https://shutongzheng.github.io/tags/td/</link>
     <description>Recent content in TD on Shutong ZHENG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 29 Sep 2021 20:51:10 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/td/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Oct 2021 16:47:57 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/td/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TD3</title>
+      <link>https://shutongzheng.github.io/posts/pfa/td3/</link>
+      <pubDate>Fri, 01 Oct 2021 16:47:57 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/pfa/td3/</guid>
+      <description>Arithmétique d&amp;rsquo;intervalles type interval = { inf:int; sup:int };; let make_interval x y = { inf = min x y ; sup = max x y } ;; let mins a b c d = min (min a b) (min c d) ;; let maxs a b c d = max (max a b) (max c d) ;; let apply op i1 i2 = let a = op i1.inf i2.inf in let b = op i1.</description>
+    </item>
+    
     <item>
       <title>TD1</title>
       <link>https://shutongzheng.github.io/posts/algo/td1/</link>
       <pubDate>Wed, 29 Sep 2021 20:51:10 +0200</pubDate>
       
       <guid>https://shutongzheng.github.io/posts/algo/td1/</guid>
-      <description>Exo1 Equivalents Q1 </description>
+      <description>Exo1 Equivalents Q1 equivalement simple = \(4n^2\) ordre de grandeur = \(n^2\)
+Q2 complexite = 1
+Q3 \(\sum_{i=1}^{n} i = \frac {n(1+n)}{2} = \frac {n^{2}+n} {2}\qquad \) ordre de grandeur = \(n^{2}\)
+\(\sum_{i=1}^{n} i^{2} = \frac {n(n+1)(2n+1)}{6}\qquad \) ordre de grandeur = \( n^{3}\)
+\(\sum_{i=1}^{n} i^{3} = (\frac {n(1+n)}{2} )^{2} \approx \frac {n^{4}} {4}\qquad \) ordre de grandeur = \( n^{4}\)
+\(\sum_{i=1}^{n} i^{k} \approx \frac {n^{k+1}} {k+1} \qquad \) ordre de grandeur = \( n^{k+1}\)</description>
     </item>
     
     <item>

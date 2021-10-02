@@ -5,7 +5,16 @@
     <link>https://shutongzheng.github.io/tags/pfa/</link>
     <description>Recent content in PFA on Shutong ZHENG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 25 Sep 2021 11:47:17 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/pfa/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Oct 2021 16:47:57 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/pfa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TD3</title>
+      <link>https://shutongzheng.github.io/posts/pfa/td3/</link>
+      <pubDate>Fri, 01 Oct 2021 16:47:57 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/pfa/td3/</guid>
+      <description>Arithmétique d&amp;rsquo;intervalles type interval = { inf:int; sup:int };; let make_interval x y = { inf = min x y ; sup = max x y } ;; let mins a b c d = min (min a b) (min c d) ;; let maxs a b c d = max (max a b) (max c d) ;; let apply op i1 i2 = let a = op i1.inf i2.inf in let b = op i1.</description>
+    </item>
+    
     <item>
       <title>TD2</title>
       <link>https://shutongzheng.github.io/posts/pfa/td2/</link>

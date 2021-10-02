@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>TD3 // Shutong ZHENG</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Shutong ZHENG" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://shutongzheng.github.io/css/main.min.545bda4bf1babfe893ec69ca921cb30e134316c5f541129e7f725957ffd9fa36.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TD3"/>
+<meta name="twitter:description" content="Arithmétique d&rsquo;intervalles type interval = { inf:int; sup:int };; let make_interval x y = { inf = min x y ; sup = max x y } ;; let mins a b c d = min (min a b) (min c d) ;; let maxs a b c d = max (max a b) (max c d) ;; let apply op i1 i2 = let a = op i1.inf i2.inf in let b = op i1."/>
+
+    <meta property="og:title" content="TD3" />
+<meta property="og:description" content="Arithmétique d&rsquo;intervalles type interval = { inf:int; sup:int };; let make_interval x y = { inf = min x y ; sup = max x y } ;; let mins a b c d = min (min a b) (min c d) ;; let maxs a b c d = max (max a b) (max c d) ;; let apply op i1 i2 = let a = op i1.inf i2.inf in let b = op i1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shutongzheng.github.io/posts/pfa/td3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-01T16:47:57+02:00" />
+<meta property="article:modified_time" content="2021-10-01T16:47:57+02:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://shutongzheng.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Shutong ZHENG" /></a>
+      <h1>Shutong ZHENG</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>My blog.</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/ShutongZHENG" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">TD3</h1>
+    <div class="post-meta">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+        Oct 1, 2021
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+        2 min read
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+        <a class="tag" href="https://shutongzheng.github.io/tags/pfa/">PFA</a>
+        <a class="tag" href="https://shutongzheng.github.io/tags/td/">TD</a>
+      </div>
+    </div>
+  </header>
+  <div class="post-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#arithmétique-dintervalles">Arithmétique d&rsquo;intervalles</a></li>
+    <li><a href="#échauffement-sur-les-listes">Échauffement sur les listes</a></li>
+    <li><a href="#échauffement-sur-les-itérateurs">Échauffement sur les itérateurs</a></li>
+    <li><a href="#le-tri-fusion">Le tri fusion</a>
+      <ul>
+        <li><a href="#couper">Couper</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <h2 id="arithmétique-dintervalles">Arithmétique d&rsquo;intervalles</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">type</span> interval <span style="color:#f92672">=</span> <span style="color:#f92672">{</span> inf<span style="color:#f92672">:</span><span style="color:#66d9ef">int</span><span style="color:#f92672">;</span> sup<span style="color:#f92672">:</span><span style="color:#66d9ef">int</span> <span style="color:#f92672">};;</span>
+
+<span style="color:#66d9ef">let</span> make_interval x y <span style="color:#f92672">=</span>
+<span style="color:#f92672">{</span>
+    inf <span style="color:#f92672">=</span> min x y <span style="color:#f92672">;</span> sup <span style="color:#f92672">=</span> max x y
+<span style="color:#f92672">}</span> <span style="color:#f92672">;;</span>
+
+<span style="color:#66d9ef">let</span> mins a b c d <span style="color:#f92672">=</span>
+ min <span style="color:#f92672">(</span>min a b<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>min c d<span style="color:#f92672">)</span> <span style="color:#f92672">;;</span>
+
+<span style="color:#66d9ef">let</span> maxs a b c d <span style="color:#f92672">=</span>
+ max <span style="color:#f92672">(</span>max a b<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>max c d<span style="color:#f92672">)</span> <span style="color:#f92672">;;</span>
+
+
+<span style="color:#66d9ef">let</span> apply op i1 i2 <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> op i1<span style="color:#f92672">.</span>inf  i2<span style="color:#f92672">.</span>inf <span style="color:#66d9ef">in</span>
+    <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> op i1<span style="color:#f92672">.</span>inf  i2<span style="color:#f92672">.</span>sup <span style="color:#66d9ef">in</span>
+    <span style="color:#66d9ef">let</span> c <span style="color:#f92672">=</span> op i1<span style="color:#f92672">.</span>sup  i2<span style="color:#f92672">.</span>inf <span style="color:#66d9ef">in</span>
+    <span style="color:#66d9ef">let</span> d <span style="color:#f92672">=</span> op i1<span style="color:#f92672">.</span>sup  i2<span style="color:#f92672">.</span>sup <span style="color:#66d9ef">in</span>
+    make_interval <span style="color:#f92672">(</span>mins a b c d<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>maxs a b c d<span style="color:#f92672">)</span> <span style="color:#f92672">;;</span>
+
+
+<span style="color:#66d9ef">let</span> add i1 i2 <span style="color:#f92672">=</span>
+    apply <span style="color:#f92672">(+)</span> i1 i2 <span style="color:#f92672">;;</span>
+<span style="color:#66d9ef">let</span> sub i1 i2 <span style="color:#f92672">=</span>
+    apply <span style="color:#f92672">(-)</span> i1 i2 <span style="color:#f92672">;;</span>
+<span style="color:#66d9ef">let</span> mul i1 i2 <span style="color:#f92672">=</span>
+    apply <span style="color:#f92672">(</span> <span style="color:#f92672">*</span> <span style="color:#f92672">)</span> i1 i2 <span style="color:#f92672">;;</span>
+
+</code></pre></div><h2 id="échauffement-sur-les-listes">Échauffement sur les listes</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> permute l <span style="color:#f92672">=</span> 
+    <span style="color:#66d9ef">match</span> l <span style="color:#66d9ef">with</span>
+    <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> []
+    <span style="color:#f92672">|</span> <span style="color:#a6e22e">B</span> <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">N</span> <span style="color:#f92672">::</span> permute s
+    <span style="color:#f92672">|</span> <span style="color:#a6e22e">N</span> <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">R</span> <span style="color:#f92672">::</span> permute s
+    <span style="color:#f92672">|</span> <span style="color:#a6e22e">R</span> <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">B</span> <span style="color:#f92672">::</span> permute s
+    <span style="color:#f92672">;;</span>
+
+<span style="color:#66d9ef">let</span> compteB l <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> compteB_acc l acc <span style="color:#f92672">=</span> 
+        <span style="color:#66d9ef">match</span> l <span style="color:#66d9ef">with</span>
+        <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> acc
+        <span style="color:#f92672">|</span> <span style="color:#a6e22e">B</span> <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> compteB_acc s <span style="color:#f92672">(</span>acc<span style="color:#f92672">+</span>1<span style="color:#f92672">)</span>
+        <span style="color:#f92672">|</span> <span style="color:#f92672">_</span> <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> compteB_acc s acc
+    <span style="color:#66d9ef">in</span>
+    compteB_acc l 0 <span style="color:#f92672">;;</span>
+
+<span style="color:#66d9ef">let</span> plus_grande_sequence_de_B l <span style="color:#f92672">=</span>
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> plus_grande_sequence_de_B_acc l acc maxV <span style="color:#f92672">=</span> 
+    <span style="color:#66d9ef">match</span> l <span style="color:#66d9ef">with</span>
+    <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> maxV
+    <span style="color:#f92672">|</span> <span style="color:#a6e22e">B</span> <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span>  plus_grande_sequence_de_B_acc s <span style="color:#f92672">(</span>acc<span style="color:#f92672">+</span>1<span style="color:#f92672">)</span> maxV
+    <span style="color:#f92672">|</span> <span style="color:#f92672">_</span> <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span>  plus_grande_sequence_de_B_acc s 0 <span style="color:#f92672">(</span>max maxV acc<span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">in</span>
+    plus_grande_sequence_de_B_acc l 0 0<span style="color:#f92672">;;</span>
+
+<span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> remplace l <span style="color:#f92672">=</span> 
+    <span style="color:#66d9ef">match</span> l <span style="color:#66d9ef">with</span>
+    <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> []
+    <span style="color:#f92672">|</span> <span style="color:#a6e22e">B</span> <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">R</span> <span style="color:#f92672">::</span> remplace s
+    <span style="color:#f92672">|</span> e <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span> e <span style="color:#f92672">::</span> remplace s
+    <span style="color:#f92672">;;</span>
+
+</code></pre></div><h2 id="échauffement-sur-les-itérateurs">Échauffement sur les itérateurs</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> affiche_liste_entiers l  <span style="color:#f92672">=</span>  List.iter <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x <span style="color:#f92672">-&gt;</span> Printf.printf <span style="color:#e6db74">&#34;%d &#34;</span> x<span style="color:#f92672">)</span> l <span style="color:#f92672">;;</span>
+
+<span style="color:#66d9ef">let</span> count v l <span style="color:#f92672">=</span> List.fold_left <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> acc x  <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">=</span> v <span style="color:#66d9ef">then</span> <span style="color:#f92672">(</span>acc<span style="color:#f92672">+</span>1<span style="color:#f92672">)</span> <span style="color:#66d9ef">else</span> acc <span style="color:#f92672">)</span> 0 l <span style="color:#f92672">;;</span>
+
+<span style="color:#66d9ef">let</span> flatten l  <span style="color:#f92672">=</span> List.fold_right <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x res <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">@</span> res<span style="color:#f92672">)</span> l [] <span style="color:#f92672">;;</span>
+
+<span style="color:#66d9ef">let</span> fst_list l <span style="color:#f92672">=</span> List.fold_right <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x acc <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">(</span>fst x<span style="color:#f92672">)</span> <span style="color:#f92672">::</span> acc<span style="color:#f92672">)</span> l [] <span style="color:#f92672">;;</span>
+</code></pre></div><h2 id="le-tri-fusion">Le tri fusion</h2>
+<p>合并排序:<br>
+如果列表是空 或者 只有一个元素 那么他就已经被排序
+否则, 把列表分成两个小列表 然后进行 对小列表进行排序 得到排序好的列表后
+再进行组合</p>
+<h3 id="couper">Couper</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"><span style="color:#66d9ef">let</span> couper l <span style="color:#f92672">=</span>
+     <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> couper_acc l acc res <span style="color:#f92672">=</span>
+      <span style="color:#66d9ef">match</span> l <span style="color:#66d9ef">with</span>
+      <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> res
+      <span style="color:#f92672">|</span> e <span style="color:#f92672">::</span> s <span style="color:#f92672">-&gt;</span>  <span style="color:#66d9ef">if</span> acc <span style="color:#66d9ef">then</span> couper_acc s <span style="color:#f92672">(</span>not acc<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">::(</span>fst res<span style="color:#f92672">),</span> snd res<span style="color:#f92672">)</span> 
+                        <span style="color:#66d9ef">else</span> couper_acc s <span style="color:#f92672">(</span>not acc<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>fst res<span style="color:#f92672">,</span> e<span style="color:#f92672">::(</span>snd res<span style="color:#f92672">))</span>
+      <span style="color:#66d9ef">in</span>
+      couper_acc l true <span style="color:#f92672">(</span>[]<span style="color:#f92672">,</span>[]<span style="color:#f92672">)</span>
+</code></pre></div>
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>addBackToTop({
+        diameter: 56,
+        backgroundColor: 'rgb(255, 82, 82)',
+        textColor: '#fff'
+      })
+    </script>
+
+  </div>
+  <div class="post-footer">
+    
+  </div>
+</article>
+
+    </main>
+  </body>
+</html>

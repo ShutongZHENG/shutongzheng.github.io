@@ -2,26 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shutongzheng.github.io/tags/algo/</loc>
-    <lastmod>2021-09-29T20:51:10+02:00</lastmod>
+    <loc>https://shutongzheng.github.io/tags/pfa/</loc>
+    <lastmod>2021-10-01T16:47:57+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/posts/</loc>
-    <lastmod>2021-09-29T20:51:10+02:00</lastmod>
+    <lastmod>2021-10-01T16:47:57+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/</loc>
-    <lastmod>2021-09-29T20:51:10+02:00</lastmod>
+    <lastmod>2021-10-01T16:47:57+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/tags/</loc>
-    <lastmod>2021-09-29T20:51:10+02:00</lastmod>
+    <lastmod>2021-10-01T16:47:57+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/tags/td/</loc>
+    <lastmod>2021-10-01T16:47:57+02:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/posts/pfa/td3/</loc>
+    <lastmod>2021-10-01T16:47:57+02:00</lastmod>
+  </url><url>
+    <loc>https://shutongzheng.github.io/tags/algo/</loc>
     <lastmod>2021-09-29T20:51:10+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/posts/algo/td1/</loc>
     <lastmod>2021-09-29T20:51:10+02:00</lastmod>
-  </url><url>
-    <loc>https://shutongzheng.github.io/tags/pfa/</loc>
-    <lastmod>2021-09-25T11:47:17+02:00</lastmod>
   </url><url>
     <loc>https://shutongzheng.github.io/posts/pfa/td2/</loc>
     <lastmod>2021-09-25T11:47:17+02:00</lastmod>
