@@ -63,7 +63,7 @@
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-        2 min read
+        3 min read
       </div>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
@@ -73,7 +73,6 @@
         <a class="tag" href="https://shutongzheng.github.io/tags/pfa/">PFA</a>
         <a class="tag" href="https://shutongzheng.github.io/tags/td/">TD</a>
       </div>
-    </div>
   </header>
   <div class="post-content">
     <nav id="TableOfContents">
@@ -84,6 +83,7 @@
     <li><a href="#le-tri-fusion">Le tri fusion</a>
       <ul>
         <li><a href="#couper">Couper</a></li>
+        <li><a href="#fusion">Fusion</a></li>
       </ul>
     </li>
   </ul>
@@ -174,16 +174,30 @@
                         <span style="color:#66d9ef">else</span> couper_acc s <span style="color:#f92672">(</span>not acc<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>fst res<span style="color:#f92672">,</span> e<span style="color:#f92672">::(</span>snd res<span style="color:#f92672">))</span>
       <span style="color:#66d9ef">in</span>
       couper_acc l true <span style="color:#f92672">(</span>[]<span style="color:#f92672">,</span>[]<span style="color:#f92672">)</span>
-</code></pre></div>
+</code></pre></div><h3 id="fusion">Fusion</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ocaml" data-lang="ocaml"> <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> fusion comp l1 l2 
+    <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> 
+</code></pre></div><p>let fusion comp l1 l2 =
+let rec aux l = function <br>
+|[],l3|l3,[] -&gt; List.rev_append l l3 <br>
+|hd1::tl1,hd2::tl2 -&gt; if comp hd1 hd2 &lt;= 0
+then aux (hd1::l) (tl1, (hd2::tl2))
+else aux (hd2::l) ((hd1::tl1), tl2) in<br>
+aux [] (l1, l2);;</p>
+
     <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>addBackToTop({
+    <script>
+      addBackToTop({
         diameter: 56,
         backgroundColor: 'rgb(255, 82, 82)',
         textColor: '#fff'
       })
     </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+
 
   </div>
   <div class="post-footer">

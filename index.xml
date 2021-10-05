@@ -5,7 +5,17 @@
     <link>https://shutongzheng.github.io/</link>
     <description>Recent content on Shutong ZHENG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 01 Oct 2021 16:47:57 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Oct 2021 16:41:06 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TP2</title>
+      <link>https://shutongzheng.github.io/posts/system/tp2/</link>
+      <pubDate>Tue, 05 Oct 2021 16:41:06 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/system/tp2/</guid>
+      <description>Diagramme de Gantt Q1 gantt title L‘ordonnancement FIFO non preemptif dateFormat s axisFormat %S P1: 0 , 8 P2: 8 , 9 P3: 9 , 11 P4: 11 , 17 P5: 17 , 18 \( \frac {0+8+7+7+11} {5} = 6.6 s\)
+Q2 gantt title L&#39;ordonnancement par priorite preemptif dateFormat s axisFormat %S P1: 0 , 4 P4: 4 , 10 P5: 10 , 11 P1: 11 , 15 P2: 15 , 16 P3: 16, 18 \( \frac {7+15+14+4}{5} = 8 s\)</description>
+    </item>
+    
     <item>
       <title>TD3</title>
       <link>https://shutongzheng.github.io/posts/pfa/td3/</link>
