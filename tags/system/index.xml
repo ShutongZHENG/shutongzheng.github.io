@@ -5,7 +5,19 @@
     <link>https://shutongzheng.github.io/tags/system/</link>
     <description>Recent content in System on Shutong ZHENG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Oct 2021 16:41:06 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/system/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Oct 2021 11:52:28 +0200</lastBuildDate><atom:link href="https://shutongzheng.github.io/tags/system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TP3</title>
+      <link>https://shutongzheng.github.io/posts/system/tp3/</link>
+      <pubDate>Tue, 19 Oct 2021 11:52:28 +0200</pubDate>
+      
+      <guid>https://shutongzheng.github.io/posts/system/tp3/</guid>
+      <description>Lecteurs-ecrivains Q1 satisfaites : C1 pas satisfaites : C2 , C3
+Q2 une section critique
+dans cette premiere version un seul lecteur est autoriser a acceder a la base en meme temps
+#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;unistd.h&amp;gt;#include &amp;lt;pthread.h&amp;gt;pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER; void lire() { printf(&amp;#34;lire debut\n&amp;#34;); usleep(rand() % 500000); printf(&amp;#34;lire fin\n&amp;#34;); } void ecrire() { printf(&amp;#34;ecrire debut\n&amp;#34;); usleep(rand() % 500000); printf(&amp;#34;ecrire fin\n&amp;#34;); } void *run(void *arg) { while (1) { if ((rand() % 2) == 0) { pthread_mutex_lock(&amp;amp;mutex); lire(); pthread_mutex_unlock(&amp;amp;mutex); } else { pthread_mutex_lock(&amp;amp;mutex); ecrire(); pthread_mutex_unlock(&amp;amp;mutex); } } } int main() { int N = 4; pthread_t T[N]; for (int i = 0; i &amp;lt; N; i++) pthread_create(&amp;amp;T[i], NULL, run, NULL); for (int i = 0; i &amp;lt; N; i++) pthread_join(T[i], NULL); return 0; } Q3 #include &amp;lt;stdio.</description>
+    </item>
+    
     <item>
       <title>TP2</title>
       <link>https://shutongzheng.github.io/posts/system/tp2/</link>
